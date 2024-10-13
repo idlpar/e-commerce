@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('provider')->nullable();
             $table->string('provider_id')->nullable();
             $table->boolean('is_subscribed')->default(true);
-            $table->string('otp', 6)->nullable();
+            $table->string('otp')->nullable();
             $table->timestamp('otp_expires_at')->nullable();
             $table->integer('otp_attempts')->default(0); // to store OTP attempts
             $table->timestamp('otp_locked_until')->nullable(); // to store lockout time

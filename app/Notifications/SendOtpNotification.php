@@ -41,7 +41,7 @@ class SendOtpNotification extends Notification
     {
         return (new MailMessage)
             ->subject('Your OTP Code')  // Custom email subject
-            ->line('Your OTP for registration is: ' . $this->otp)  // Include the OTP
+            ->line('Your OTP code is: ' . $this->otp)  // Include the OTP
             ->line('This OTP will expire in 5 minutes.')
             ->line('If you did not request this, please ignore this email.')
             ->line('Thank you for using our application!');

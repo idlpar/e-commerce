@@ -81,7 +81,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'otp' => $otp, // Store OTP in the database
+            'otp' => Hash::make($otp),// Store OTP in the database
             'otp_expires_at' => $otpExpiry, // Set OTP expiration time
         ]);
 

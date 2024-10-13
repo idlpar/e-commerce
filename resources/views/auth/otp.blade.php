@@ -13,7 +13,7 @@
             <x-card-header class="text-2xl font-bold text-gray-700">{{ __('Verify OTP') }}</x-card-header>
 
             <!-- Reuse Form Component -->
-            <x-form :action="route('verify.otp')">
+            <x-form :action="route('otp.verify')">
                 <!-- Hidden Email Address Field -->
                 <input type="hidden" name="email" id="userEmail" value="{{ Auth::user()->email }}" />
 
@@ -41,7 +41,7 @@
             </x-form>
 
             <!-- Hidden Form for Resending OTP -->
-            <form method="POST" action="{{ route('resend.otp') }}" id="hiddenResendOtpForm" style="display:none;">
+            <form method="POST" action="{{ route('otp.resend') }}" id="hiddenResendOtpForm" style="display:none;">
                 @csrf
                 <!-- Hidden Email Field -->
                 <input type="hidden" name="email" value="{{ Auth::user()->email }}">
